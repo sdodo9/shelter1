@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="1page.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+</head>
+<body>
+    <div class="header">
+         <nav class="menu">
+            <a href="#1page">Main</a>
+            <a href="#2page">Song</a>
+            <a href="#3page">Book</a>
+            <a href="#4page">Media</a>
+            <a href="#5page">Wish</a>
+            <button class="menu-btn">&#9776;</button>
+         </nav>
+        
+    </div>
+    <div class="Main" id="1page">
+    <div class="bg-video">
+
+        <video class="bg-video__content" autoplay muted loop>
+          <source src="./img/main.mp4" type="video/mp4" />
+          <source src="./img/main.mp4" type="video/webm" />
+          Your browser is not supported!
+        </video>
+    </div>
+</div>
+
+<div class="Song" id="2page">
+  <div class="song">
+   <img src="./img/ipod.png">
+   <div class="inner">
+    inner
+    <div class="box">
+      box
+      <div class="info">
+      <div class="title">청록</div>
+      <div class="artist">이츠</div>
+      <div class="album-name">CHUNG LOCK</div>
+    </div>
+      <input type="range" id="progress-bar" value="0" max="100">
+
+   
+  </div>
+    <div class="bar">
+      <div id="clock">--:--
+
+      </div>
+      <div class="num">1/5</div>
+      
+      <div class="album">
+        <img src="./img/album1.webp"> 
+      
+      </div>
+     
+      </div>
+       
+      <div class="button">
+      <button class="back" onclick="backSong()"></button>
+      <button class="next" onclick="nextSong()"></button>
+      <button class="play-pause" onclick="togglePlayPause()"></button>
+    </div>
+     </div>
+     
+   </div>
+   
+  </div>
+
+  <div class="Book" id="3page">
+    <div class="3box">
+    
+    </div>
+    <div class="letter">
+    
+      <img src="./img/letter.png">
+      <div class="write">
+        책은 마음의 양식! 배부르게 먹자
+      <div class="book">
+        <div class="book1">1. 돌이킬 수 있는</div>
+        <div class="book2">2. 유령해마</div>
+        <div class="book3">3. 보건교사 안은영</div>
+        <div class="book4">4. 연의 편지</div>
+      </div>
+  </div>
+</div>
+  </div>
+  
+  <div class="popup-overlay" id="popup1">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span> 
+       
+        <p class="booktitle"> 돌이킬 수 있는 </p>
+        
+        <div class="popup-text">
+          <p class="pt1">“왜 이렇게까지 하는거지? 윤서리를 살리려고 왜 그렇게까지 견디는거야?”
+          </p>
+          <p class="pt2">정여준은 눈을 동그랗게 뜨고 최주상을 보았다. <br>
+            그리고 먼 바깥에 환영처럼 스쳐 지나가는 윤서리의 모습을 보고, 다시<br> 그를 향해 고개를 돌렸다.
+            </p>
+            <p class="pt3">
+              "왜겠어요?"
+            </p>
+            <p class="pt4">
+              정여준은 미소 지었다. 그를 완전히 처음 보는 낯선 이로 느낄 만큼 찬란한 미소였다.
+            </p>
+            <p class="pt5">"왜겠어요."</p>
+        </div>
+        <div class="bbottom">
+        <p class="rating"> 별점 : ★★★★☆</p>
+        <p class="review">-> SF에 반전에 찌통 순애를 섞어 먹어보아요… 맛없을 수 없는 소재…</p>
+        </div>
+    </div>
+</div>
+
+<div class="popup-overlay" id="popup2">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <p class="booktitle">유령 해마</p>
+        <div class="popup-text">
+          <p class="pt1"> 나는 혼자였다. 나는 정말로 철저히 혼자였다.
+          </p>
+          <p class="pt21">하필이면 그때 나는 네 생각을 했다. <br>
+            
+            </p>
+            <p class="pt31">
+              다른 때가 아니라 바로 그때였기 때문에 비로소 네 생각이 났다. <br>
+어둠 속에 혼자 있던 아이. 자신을 알아서 구하지 않으면 살아남을 수<br> 없었던 그 아이. 세상 밖으로 나가기 위해 제 존재를 인식하지도 못하는<br> 해마를 따라가야 했던 이름 없는 아이…….
+
+
+            </p>
+            <p class="pt4">
+              나는 너처럼 어둠 속에 버려지고 나서야, 내가 홀로 나를 구해야만 하는<br> 상황에 처하고 나서야 그때의 네 기분을 상상할 수 있었다.
+
+            </p>
+         
+        </div>
+        <div class="bbottom">
+        <p class="rating"> 별점 : ★★★☆☆</p>
+        <p class="review">-> 4천만 인구 중에 너. 너 하나만이 날 공감하고 구원해줄 수 있을거야…란 어긋난 믿음
+        </p>
+        </div>
+    </div>
+</div>
+
+<div class="popup-overlay" id="popup3">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <p class="booktitle">보건교사 안은영</p>
+        <div class="popup-text">
+          <p class="pt1"> 어차피 언젠가는 지게 되어 있어요. <br>
+            친절한 사람들이 나쁜 사람들을 어떻게 계속 이겨요.
+            
+          </p>
+          <p class="pt21">도무지 이기지 못하는 것 까지 친절에 포함되어 있으니까 괜찮아요. 
+            </p>
+            <p class="pt31">
+              져도 괜찮아요. 그게 이번이라도 괜찮아요. 도망칩시다.
+
+
+            </p>
+            <p class="pt4">
+              인표가 은영의 귓가에 대고 말했다. <br>
+크게 말하지 않았으므로 잘못 들은 걸 수도 있었다. <br>
+ 어쩌면 인표가 아니라 은영 스스로가 말한 것 같기도 했다.
+
+            </p>
+            <p class="pt51">
+              거짓말이어서, 거짓말처럼 마음이 편해졌다.
+            </p>
+         
+        </div>
+        <div class="bbottom">
+        <p class="rating"> 별점 : ★★★★★</p>
+        <p class="review">-> 친절이 오염된 세계를 구한다… 친절함이 멍청한 게 아니라 세계를 구한다는 게 좋아
+        </p>
+        </div>
+    </div>
+</div>
+
+<div class="popup-overlay" id="popup4">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <p class="booktitle">연의 편지</p>
+        <div class="popup-text">
+          <p class="pt1"> 소라야 안녕. 잘지내니? <br>
+            난 여기서 그럭저럭 적응해가고 있어. 하지만 여기에도 괴롭힘은 있더라.. 
+
+            
+          </p>
+          <p class="pt21">누군가를 해치는 말들을 내가 들었던 것과 크게 다르지 않아서 <br>
+            마치 내 등 뒤에서 말하는 것처럼 가깝게 들렸어.
+            </p>
+            <p class="pt31">
+              여긴 옳은 소리에 동조해주는 사람들이 있었어.
+
+
+            </p>
+            <p class="pt4">
+              내가 다른 사람의 부당한 일에 나서서 그만하라고 할 수 있었던 건 <br>
+모두 네 덕분이야. 네가 나에게 그렇게 해주었기 때문에,<br>
+ 나도 다른 사람에게 할 수 있었어. 고마워.
+
+
+            </p>
+            <p class="pt51">
+              지금 나에게 가장 필요한 말이었다.
+
+            </p>
+         
+        </div>
+        <div class="bbottom">
+        <p class="rating"> 별점 : ★★★★★</p>
+        <p class="review">-> 연의 편지는 인연의 편지일 수도, 정호연의 편지일 수도… 위로가 되는 만화다…
+        </p>
+        </div>
+    </div>
+</div>
+<div class="Media" id="4page">
+<div class="wbox">
+  ff <br>
+
+
+
+  
+  <div class="apple">
+    <img src="./img/apple1.png">
+
+  </div>
+</div>
+</div>
+
+
+     
+
+<script src="shelter.js"></script>
+</body>
+</html>

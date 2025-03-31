@@ -1,0 +1,319 @@
+@import url('https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+
+* {
+  font-family: 'Galmuri11', Arial, sans-serif; /* 원하는 폰트를 지정 */
+}
+
+.header {display: flex;
+    justify-content: space-between;
+     align-items: center; 
+     background-color: black;
+     position: fixed;
+     top: 0; 
+     left: 0;
+     width: 100%;
+     z-index: 1000;
+     padding:  40px;}
+
+.menu {
+      display: flex;
+      gap: 15vw;
+      padding-left: 100px;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1001;
+      transition: width 0.3s ease; /* 메뉴가 열릴 때 애니메이션 효과 */
+  }
+  
+.menu a {
+    
+    font-family: 'Galmuri11', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    
+}
+.menu.active .menu-btn {
+  font-size: 40px;  /* 닫기 버튼 크기 */
+  position: fixed;  /* 화면 내 고정 */
+  top: 20px;  /* 상단에서 20px */
+  right: 20px;  /* 오른쪽에서 20px */
+  z-index: 1100;  /* 메뉴보다 위에 표시 */
+}
+
+.menu-btn {
+  display: block;  /* 항상 보이도록 설정 */
+  font-size: 40px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;  /* 메뉴 위에 표시되도록 */
+ 
+
+}
+
+
+
+.menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100vw;  /* 화면의 100% 너비로 확장 */
+  height: 100vh;  /* 화면 높이에 맞춰 확장 */
+  flex-direction: column;  /* 메뉴 항목들을 세로로 배치 */
+  gap: 10vh;  /* 항목 간의 간격을 줄임 (기존 gap보다 더 작은 값으로 설정) */
+  justify-content: center;
+  top: 0;
+  left: 0;
+  padding: 0; /* 메뉴의 여백 없애기 */
+  margin: 0;  /* 불필요한 여백 없애기 */
+  box-sizing: border-box; /* 패딩, 보더 포함된 크기 계산 */ 
+}
+
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 90;
+  }
+  
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* 가로 스크롤 숨기기 */
+
+}
+.Main { height: 100vh;  /* 화면 전체 높이 */
+  width: 100%;
+  position: relative;}
+
+
+/* 2페이지 전체 */
+.Song {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* 전체 화면 높이 */
+  width: 100%;
+  background-color: #9EB0AD; /* 배경색 */
+  background-image: url(./img/background1.jpg);
+  background-size: cover;
+  background-position: center;
+  
+}
+
+/* 이미지 + 텍스트 컨테이너 */
+.song {
+  position: relative; 
+  display: inline-block; /* 이미지 크기에 맞춰 컨테이너 조정 */
+  max-width: 40vw; /* 화면 크기에 맞게 비율 유지 */
+}
+
+/* 이미지 크기 조정 */
+.song img {
+  width: 100%; /* 부모 요소(.song)에 맞게 크기 자동 조정 */
+  height: auto;
+  display: block;
+}
+
+.inner { position: absolute;
+  top:7%;
+  left:15%;
+  width:71%;
+  height:35.5%;
+  border-radius: 15px;
+
+  background-color: black;
+z-index:10;
+display: inline-block;
+
+}
+
+
+.bar {
+  position: absolute;
+  top: 16%; /* 이미지의 가장 위쪽 */
+  left: 49%;
+  transform: translateX(-50%) translateY(-100%); /* 이미지 바깥으로 이동 */
+  color: black;
+  
+  border-radius: 6px;
+  width: 100%; /* 글자가 적절한 크기로 유지됨 */
+  height:15%;
+  background: linear-gradient(to right, rgb(246, 246, 246), #BCD3F2);
+  
+}
+
+.box {background-color:  white;
+width: 100%;
+height: 100%;
+position: absolute;
+top:1%;
+border-radius: 6px;
+right: 1%}
+
+#clock {padding :3%; font-family: 'Galmuri11';
+  text-align: center; }
+
+.num {padding-top :2%; padding-left: 5%; padding-bottom:2%;font-weight: bold ; font-family: 'Galmuri11'}
+
+.album {width: 33%; padding-left: 5%;}
+.next {margin-left: 27%; width: 11%; height:100%;
+ border:none; cursor: pointer; background-color: transparent; }
+
+.back {margin:17%; margin-top:78%; width: 11%; height: 100%; border:none; cursor: pointer;background-color: transparent;}
+
+.play-pause {width:13%; height: 100%; margin-left: 44%;  border: none; cursor: pointer; background-color: transparent;}
+
+.button {height: 15%; margin-top:48%; margin-right: 2%;}
+
+.info {margin-top: 20%; margin-left:43%; font-size: 1.17em; line-height: 200%; font-family: 'Galmuri11';}
+
+
+#progress-bar {
+  width: 90%;
+  height: 8px; /* 바 두께 */
+  appearance: none; /* 기본 스타일 제거 */
+  background: linear-gradient(to right, #BCD3F2, #BDD034); /* 그라데이션 */
+  outline: none;
+  cursor: pointer;
+  margin-left: 5%;
+  
+  margin-top:10%
+  
+}
+
+
+#progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: white; /* 동그란 핸들 색상 */
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+#progress-bar::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+
+
+#progress-bar::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.Book {background-color: #BCD3F2; display: flex;
+height: 100vh; width: 100%; justify-content: center; align-items: center; background-image: url(./img/background4.jpg);  }
+
+.letter {display: flex;justify-content: center; align-items: center; height: 100%; position: relative;}
+
+.letter img {display:block; max-width:90%; height: auto; }
+
+.write { position: absolute; font-size:1.7em; top:35%; left:22%}
+
+.book {padding-top:7%; line-height: 2.4;}
+
+
+
+
+
+
+
+
+/* 📌 팝업 기본 설정 (처음에는 숨김) */
+.popup-overlay {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.popup-overlay img { width: 100%; max-height: 900px; max-width: 1400px; }
+
+/* 📌 팝업 내용 */
+.popup-content {
+  background: white;
+  padding: 30px;
+  width : 80%;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  box-sizing: border-box;
+  
+}
+.booktitle {font-size: 3em; margin-left: 5%; 
+display: inline-block; position: relative;}
+.booktitle::after {content:""; display: block;    width: calc(70vw - 115%) ; height: 2px; background-color: black; top:50%; left:100%; position: absolute; margin-left: 40px; }
+
+
+
+.popup-text {font-size: 1.6em; text-align: center;
+  border:2px solid black; max-width: 1865px; width: 90%;display: block; margin: 5% auto; }
+.pt3 {font-weight: bold;}
+.bbottom {margin-top:5%;margin-left: 5%; font-size: 1.6em;}
+.pt21 {font-weight:bold}
+.pt51 {font-weight: bold;}
+
+/* 📌 닫기 버튼 */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 📌 책 목록 스타일 */
+.book div {
+  cursor: pointer;
+}
+
+
+.Media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* 전체 화면 높이 */
+  width: 100%;
+  background-color: #A0B335; /* 배경색 */
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.wbox {width: 90%; height: 85%; background-color: white; border-radius: 70px; color:#A0B335; }
+
+.apple {display: flex;justify-content: center; align-items: center; height: 100%; position: relative;}
+
+.apple img {width: 50%; max-width: 900px;}
+
+.text {color: #487A00; text-align: center;}
